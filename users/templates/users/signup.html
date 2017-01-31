@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Sign Up | {{ block.super }} {% endblock %}
+
+{% block content %}
+    <div class="row pt">
+        <div class="col-md-6">
+            <form action="" method="POST">
+                <h3>Login</h3>
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" value="Sign Up" class="btn btn-primary">
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <h2>Apply for Research to URO now!</h2>
+            <p>Lorem eaque ab omnis soluta autem voluptates. Quas porro fugiat possimus voluptatem
+            amet officia vero incidunt neque modi non, est totam consequatur consectetur
+            consequuntur necessitatibus consectetur. Molestiae minima voluptatibus ipsa!</p>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

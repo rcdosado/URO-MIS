@@ -1,9 +1,10 @@
 from django.core.urlresolvers import reverse
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import logout
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.views.generic import FormView
+from django.views.generic import FormView, CreateView
 from . import forms
 
 
@@ -19,3 +20,8 @@ class LogoutView(LoginRequiredMixin, FormView):
     def form_valid(self, form):
         logout(self.request)
         return HttpResponseRedirect(reverse('home'))
+
+
+class SignupView(CreateView):
+    form_class = UserCreationForm 
+    template_name = 'users/signup.html'

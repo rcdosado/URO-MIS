@@ -39,11 +39,9 @@
                     <li><a href="{% url 'users:login'%}">Login</a></li>
                     <li><a href="#">Sign up</a></li>
               {% else %}
-                    <li><a href="">About</a></li>
-                    <li><a href="">System</a></li>
-                    <li><a href="">Research</a></li>
                     <li><a href="">Admin</a></li>
-                    <li><a href="">Info</a></li>
+                    <li><a href="{% url 'users:logout' %}">Logout</a></li>
+
               {% endif %}
               </ul>
         </div><!--/.navbar-collapse -->

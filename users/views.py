@@ -1,4 +1,4 @@
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import logout
@@ -25,3 +25,4 @@ class LogoutView(LoginRequiredMixin, FormView):
 class SignupView(CreateView):
     form_class = UserCreationForm 
     template_name = 'users/signup.html'
+    success_url = reverse_lazy('users:login')

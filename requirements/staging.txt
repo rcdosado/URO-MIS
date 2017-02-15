@@ -1,0 +1,6 @@
+-r base.txt
+django-bootstrap3==8.1.0
+factory-boy==2.8.1
+Faker==0.7.7
+sqlparse==0.2.2
+psycopg2==2.5.3

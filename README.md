@@ -2,4 +2,3 @@
 URO Management Information System
 ---------------------------------
 
-.. POC

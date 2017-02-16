@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'employees',
     'education',
+    'publications',
 ]
 
 if DJANGO_MODE == 'local':

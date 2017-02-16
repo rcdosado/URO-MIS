@@ -65,7 +65,7 @@ MIDDLEWARE = [
 
 if DJANGO_MODE == 'local':
     MIDDLEWARE += [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
 ROOT_URLCONF = 'mis.urls'

@@ -21,6 +21,7 @@ DJANGO_MODE = os.getenv('DJANGO_MODE', "local").lower()
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+#import pdb;pdb.set_trace()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'employees',
     'education',
     'publications',
+    'events',
 ]
 
 if DJANGO_MODE == 'local':

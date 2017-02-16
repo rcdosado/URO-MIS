@@ -7,6 +7,7 @@ from mis.base import BaseProfile
 class Publisher(BaseProfile):
     title = models.CharField(max_length=256)
 
+
     def __str__(self):
         return self.title
 
@@ -47,6 +48,7 @@ class Discipline(BaseProfile):
 
 class Article(BaseProfile):
     title = models.CharField(max_length=256, help_text="Title of Article")
+    abstract = models.TextField(max_length=256, blank=True, help_text="Enter Abstract here")
     start_page = models.PositiveIntegerField(blank=True, help_text="Start page in the publication")
     end_page = models.PositiveIntegerField(blank=True, help_text="End page in the publication")
     publication = models.ForeignKey(Publication, null=True, blank=True, related_name='publication')

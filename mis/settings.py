@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'employees',
-    'users',
 ]
 
 if DJANGO_MODE == 'local':
@@ -157,5 +156,5 @@ STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets'), ]
 
 # Authentication
-LOGIN_URL = 'users:login'
-LOGIN_REDIRECT_URL = 'users:dashboard'
+LOGIN_URL = 'employees:login'
+LOGIN_REDIRECT_URL = 'employees:dashboard'

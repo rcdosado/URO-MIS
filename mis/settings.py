@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'employees',
+    'education',
 ]
 
 if DJANGO_MODE == 'local':

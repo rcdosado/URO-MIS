@@ -6,7 +6,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-#from education.models import Attainment, Undergrad, Masteral, Doctoral
+from education.models import Attainment, Undergrad, Masteral, Doctoral
 from mis.base import BaseProfile
 
 
@@ -124,7 +124,7 @@ class Employee(BaseProfile):
     unit = models.ForeignKey(Unit, null=True, blank=True, help_text="Choose the Unit user is currently working")
     started = models.DateField(null=True, auto_now_add=True, help_text="Started working in the Institution")
     expertise = models.ForeignKey(Expertise, null=True, blank=True)
-    #education = models.ForeignKey(Attainment, null=True, blank=True, help_text="Add your educational Attainment here")
+    education = models.ForeignKey(Attainment, null=True, blank=True, help_text="Add your educational Attainment here")
     mobile_no = models.CharField(max_length=30, blank=True,help_text="Follow this format e.g +639399581237")
     landline_no = models.CharField(max_length=30, blank=True, help_text="Follow this format e.g 02-433-0262")
 	
